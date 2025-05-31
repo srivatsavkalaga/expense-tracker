@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+}
+.budgetEntryCard {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: aqua;
+  padding: 30px;
+
+}
+
+.budgetEntry {
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+
+.selectType {
+  
+  margin-bottom: 30px;
+}
+
+.button {
+  text-align: left;
+}
