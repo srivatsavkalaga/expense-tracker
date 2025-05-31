@@ -81,7 +81,7 @@ function App() {
           </div>
           <button type="submit">Submit</button>
         </form>
-
+        <p>Total Expenses: {entries["Food & Groceries"]+ entries["Travel"]+ entries["Others"]}</p>
         <div style={{ marginTop: '30px' }}>
           <h2>Expense Entries</h2>
 
