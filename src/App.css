@@ -3,8 +3,8 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: 
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://images.tv9telugu.com/wp-content/uploads/2022/10/sabarimala-ayyappa-swamy-temple.jpg")
+    linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("https://tse3.mm.bing.net/th/id/OIP.FBRKrXczNKyJyDbQORr8fQAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3")
     no-repeat center center fixed;
   background-size: cover;
   color: #f9f9f9;
@@ -12,22 +12,24 @@ body {
 
 /* Main app wrapper */
 .p-4 {
-  max-width: 400px;
-  margin: 2rem auto;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 2rem;
+  max-width: 600px;   /* 🔥 changed from 200px → better for desktop */
+  width: 90%;         /* 🔥 ensures it uses most of the mobile width */
+  margin: 1rem auto;
+  background: rgba(0, 0, 0, 0);
+  padding: 1.5rem;
   border-radius: 1rem;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Headings */
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem; /* 🔥 smaller base for mobile */
   font-weight: 600;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   margin-bottom: 0.8rem;
   color: #ffdf6c;
+  text-align: center; /* 🔥 looks nicer on phone */
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
@@ -41,7 +43,7 @@ input[type="number"] {
   margin-bottom: 1rem;
   font-size: 1rem;
   outline: none;
-  background: rgba(255, 255, 255, 255);
+  background: #fff;
   color: #333;
 }
 
@@ -52,8 +54,9 @@ button {
   border-radius: 0.5rem;
   font-size: 0.95rem;
   font-weight: 500;
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 1.2rem; /* 🔥 bigger tap area for fingers */
   margin-top: 0.5rem;
+  width: 100%; /* 🔥 full-width buttons on mobile */
   transition: all 0.3s ease;
 }
 
@@ -63,23 +66,15 @@ button:hover {
 }
 
 /* Specific button colors */
-.bg-blue-500 {
-  background: #3b82f6;
-}
-.bg-green-500 {
-  background: #22c55e;
-}
-.bg-red-500 {
-  background: #ef4444;
-}
-.bg-red-700 {
-  background: #b91c1c;
-}
+.bg-blue-500 { background: #3b82f6; }
+.bg-green-500 { background: #22c55e; }
+.bg-red-500 { background: #ef4444; }
+.bg-red-700 { background: #b91c1c; }
 
 /* Event list styling */
 ul {
   margin: 0.5rem 0 1rem 0;
-  padding-left: 1.2rem;
+  padding-left: 1rem;
 }
 
 li {
@@ -114,4 +109,14 @@ strong {
 
 .css-1nmdiq5-menu div {
   color: #333 !important;
+}
+
+/* 🔥 Mobile tweaks */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1rem;
+  }
+  .p-4 {
+    padding: 1rem;
+  }
 }
