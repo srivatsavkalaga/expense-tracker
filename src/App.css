@@ -1,26 +1,117 @@
-.App {
-  text-align: center;
-}
-.budgetEntryCard {
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
-  background-color: aqua;
-  padding: 30px;
-
-}
-
-.budgetEntry {
-  margin-left: 10px;
-  margin-bottom: 30px;
+/* Background with gradient overlay */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.tv9telugu.com/wp-content/uploads/2022/10/sabarimala-ayyappa-swamy-temple.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  color: #f9f9f9;
 }
 
-.selectType {
-  
-  margin-bottom: 30px;
+/* Main app wrapper */
+.p-4 {
+  max-width: 400px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-.button {
-  text-align: left;
+/* Headings */
+h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #ffdf6c;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
+/* Inputs */
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 255);
+  color: #333;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Specific button colors */
+.bg-blue-500 {
+  background: #3b82f6;
+}
+.bg-green-500 {
+  background: #22c55e;
+}
+.bg-red-500 {
+  background: #ef4444;
+}
+.bg-red-700 {
+  background: #b91c1c;
+}
+
+/* Event list styling */
+ul {
+  margin: 0.5rem 0 1rem 0;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Card look for event list items */
+ul.list-disc li {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Strong tags (event titles) */
+strong {
+  color: #fff;
+}
+
+/* React Select overrides */
+.css-13cymwt-control {
+  border-radius: 0.5rem !important;
+  border: none !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.css-1nmdiq5-menu {
+  background: #fff !important;
+  border-radius: 0.5rem !important;
+  overflow: hidden;
+}
+
+.css-1nmdiq5-menu div {
+  color: #333 !important;
+}
