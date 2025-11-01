@@ -1,56 +1,66 @@
-/* Background with gradient overlay */
-img {
-    display: block;           
-    margin: 20px auto;         
-    max-width: 600px;
-    max-height: 250px;                   
+/* ========== Global Reset & Base ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
   background: linear-gradient(135deg, #1e3c72, #2a5298);
   color: #f9f9f9;
   min-height: 100vh;
-  width: 100%;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  overflow-x: hidden;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden; /* ✅ prevents horizontal scroll on mobile */
 }
 
+/* ========== Image Header ========== */
+img {
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 0.75rem;
+  object-fit: cover;
+}
 
-
-/* Main app wrapper */
+/* ========== App Container ========== */
 .p-4 {
-  max-width: 600px;   /* 🔥 changed from 200px → better for desktop */
-  width: 90%;         /* 🔥 ensures it uses most of the mobile width */
-  margin: 1rem auto;
-  background: rgba(0, 0, 0, 0);
-  padding: 1.5rem;
+  width: 100%;
+  max-width: 480px; /* ✅ optimal for all devices */
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 1rem;
-  backdrop-filter: blur(5px);
+  padding: 1.5rem;
+  margin-top: 1rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  overflow: hidden;
 }
 
-/* Headings */
+/* ========== Headings ========== */
 h2 {
-  font-size: 1.2rem; /* 🔥 smaller base for mobile */
+  font-size: 1.25rem;
   font-weight: 800;
-  margin-top: 1rem;
-  margin-bottom: 0.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
   color: #ffdf6c;
-  text-align: center; /* 🔥 looks nicer on phone */
+  text-align: center;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* Inputs */
+/* ========== Inputs ========== */
 input[type="text"],
 input[type="number"] {
   width: 100%;
-  padding: 0.7rem;
+  padding: 0.75rem;
   border: none;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
@@ -58,56 +68,58 @@ input[type="number"] {
   outline: none;
   background: #fff;
   color: #333;
+  transition: all 0.2s ease;
 }
 
-/* Buttons */
+input:focus {
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.8);
+}
+
+/* ========== Buttons ========== */
 button {
   cursor: pointer;
   border: none;
   border-radius: 0.5rem;
-  font-size: 0.95rem;
-  font-weight: 500;
-  padding: 0.8rem 1.2rem; /* 🔥 bigger tap area for fingers */
-  margin-top: 0.5rem;
-  width: 100%; /* 🔥 full-width buttons on mobile */
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.9rem;
+  margin-top: 0.3rem;
+  width: 100%;
   transition: all 0.3s ease;
+  color: white;
 }
 
 button:hover {
   transform: translateY(-2px);
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
-/* Specific button colors */
+/* Button color variants */
 .bg-blue-500 { background: #3b82f6; }
 .bg-green-500 { background: #22c55e; }
 .bg-red-500 { background: #ef4444; }
 .bg-red-700 { background: #b91c1c; }
 
-/* Event list styling */
+/* ========== Lists ========== */
 ul {
-  margin: 0.5rem 0 1rem 0;
-  padding-left: 1rem;
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1rem;
 }
 
 li {
-  margin-bottom: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.6rem;
   line-height: 1.5;
 }
 
-/* Card look for event list items */
-ul.list-disc li {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 0.6rem 1rem;
-  border-radius: 0.5rem;
-}
-
-/* Strong tags (event titles) */
 strong {
   color: #fff;
 }
 
-/* React Select overrides */
+/* ========== React Select Overrides ========== */
 .css-13cymwt-control {
   border-radius: 0.5rem !important;
   border: none !important;
@@ -124,12 +136,55 @@ strong {
   color: #333 !important;
 }
 
-/* 🔥 Mobile tweaks */
-@media (max-width: 480px) {
+/* ========== Footer (Copyright Section) ========== */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: #ddd;
+  opacity: 0.8;
+}
+
+footer span {
+  display: inline-block;
+  margin-top: 0.3rem;
+}
+
+footer span::before {
+  content: "© ";
+}
+
+/* ========== Responsive Design Tweaks ========== */
+@media (max-width: 600px) {
+  body {
+    padding: 0.8rem;
+  }
+
+  .p-4 {
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  input, button {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .p-4 {
+    padding: 1rem;
+  }
+
   h2 {
     font-size: 1rem;
   }
-  .p-4 {
-    padding: 1rem;
+
+  button {
+    padding: 0.8rem;
   }
 }
