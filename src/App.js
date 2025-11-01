@@ -186,7 +186,10 @@ useEffect(() => {
   const balances = calculateBalances();
   const directDebts = calculateDirectDebts();
   return (
+  <u>
   <div className="p-4">
+      <img src="https://hindupad.com/wp-content/uploads/2012/12/Sabarimala-Ayyappa-Swamy.jpg" alt="Rounded Image" class="rounded-img"></img>
+
       {/* Master Reset */}
       <button
         type="button"
@@ -338,7 +341,10 @@ useEffect(() => {
           )
         )}
       </ul>
+    
     </div>
+    <footer>© 2025 Developed and maintained by Srivatsav</footer>
+    </u>
   );
 }
 
